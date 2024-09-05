@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import ChildA from './ChildA';
+import ChildB from './ChildB';
+import { InputProvider } from './InputProvider';
 
 function App() {
+  console.log("Called APP")
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <InputProvider>
+      <ChildA />
+      <ChildB />
+    </InputProvider>
   );
 }
 
